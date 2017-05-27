@@ -1,11 +1,9 @@
 library(rjstat)
 library(dplyr)
 
-cso_rainfall_url <- 
-  'http://www.cso.ie/StatbankServices/StatbankServices.svc/jsonservice/responseinstance/MTM01'
+source("./R/CSO_API/get_cso_dataset.R")
 
-rainfall <- fromJSONstat(readLines(cso_rainfall_url))
-names(rainfall)
+rainfall <- get_cso_dataset("MTM01") 
 
 rainfall$`Rainfall by Meteorological Weather Station, Month and Statistic` %>% 
   filter(`Meteorological Weather Station` == 'Clones') %>% 
