@@ -1,7 +1,7 @@
 library(rjstat)
 library(dplyr)
 
-source("./R/CSO_API/get_cso_dataset.R")
+source("./R/CSO_API/package/get_cso_dataset.R")
 
 rainfall <- get_cso_dataset("MTM01") 
 
