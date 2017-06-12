@@ -7,7 +7,10 @@
 # - 10 most common words, bigrams and trigrams are then found for children or no children selection. 
 # - See below for more information on how bigrams and trigrams are found. 
 
-# In[1]:
+'''
+To run, make sure the path is correct (fn = 'survey_results_clean.csv.xlsx')
+The easiest way to execute this is probably in a jupyter notebook - some of the plots are not saved to a file
+'''
 
 import pandas as pd
 import nltk

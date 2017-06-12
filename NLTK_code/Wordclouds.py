@@ -1,7 +1,12 @@
 
 # coding: utf-8
 
-# In[ ]:
+'''
+This code makes wordclouds from free text fields
+To run, make sure the path is correct for both the csv file and the binary shape image
+Three different wordclouds will then be generated in the directory: simple, with the image mask and with bigrams
+If you don't have a suitable background image etc, just comment out the make_workclouds call for it.
+'''
 
 # import all of the necessary modules
 
@@ -53,7 +58,7 @@ def make_wordcloud(df, column_name, title, output_name, mask = False, bigram_mod
     plt.axis("off") # remove the axes
     plt.title(title) # give it a title
     plt.show() # show the image
-    #plt.savefig(output_name, dpi = 300) # optionally, save it to the working directory
+    plt.savefig(output_name, dpi = 300) # optionally, save it to the working directory
 
 
 # In[ ]:

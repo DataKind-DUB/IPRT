@@ -1,7 +1,12 @@
 
 # coding: utf-8
 
-# In[4]:
+'''
+This code finds common bigrams (two words in a row that aren't nonsense words like "the" etc.) for the free text fields in the survey
+To run, just execute this code after making sure that the path below is correct
+To see the plots generated, copy the entire code to a jupyter notebook and run
+Note - this code seems to be python 2 compatible only
+'''
 
 import pandas as pd
 import numpy as np
@@ -35,7 +40,7 @@ get_ipython().magic('matplotlib inline')
 
 # In[7]:
 
-df = pd.read_csv('survey_results_clean.csv', na_values=['nan'])
+df = pd.read_csv('survey_results_clean.csv', na_values=['nan']) # this is the path to the file
 
 
 # Note: Population distribution is not normal, therefore certain groups will appear as having a stronger signal than others. It might be a good idea to correct this if each age group is to be considered equal. Alternatively, if the majority of the population is to be considered only, then can leave the data as is.
