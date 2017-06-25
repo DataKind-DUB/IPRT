@@ -1,6 +1,5 @@
 *.ini
 *.csv
 .Rproj.user
-*.Rproj
 .Rhistory
 .RData
