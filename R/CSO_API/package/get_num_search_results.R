@@ -10,9 +10,18 @@ get_num_search_results <- function(search_term){
   req <- create_cso_search_url(search_term, 0)
   res <- get_httr_html_content(req)
   
+  res <-
   (res %>%
       html_node(".fl") %>% 
       html_text %>% 
       stringr::str_match("made (.*?) results"))[2] %>% 
     as.numeric()
+  
+  #  Handling NA when no result returned.
+  if(is.na(res)){
+    0
+  } else {
+    res
+  }
+  
 }
