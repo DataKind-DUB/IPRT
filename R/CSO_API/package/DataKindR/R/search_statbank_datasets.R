@@ -1,3 +1,13 @@
+#' Retrives a list of CSO Statbank dataset descriptions and dataset codes.
+#' These codes can be used with get_cso_dataset in this package.
+#'
+#' @param search_term A search term used to get CSO datasets.
+#' @param max_num_results The maximum number of results to return.
+#' @return A data frame with two columns, \vode{dataset_code} &
+#' \code{dataset_desc}. Codes can be used to retrieve Statbank datasets.
+#' @examples
+#' search_statbank_datasets("employment 2002")
+#' search_statbank_datasets("age", 1001)
 
 search_statbank_datasets <- function(search_term, max_num_results = 500){
   offset <- 0

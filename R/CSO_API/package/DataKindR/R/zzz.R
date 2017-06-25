@@ -1,5 +1,3 @@
-#' @keywords internal
-#'
 .onLoad <- function(libname, pkgname) {
   op <- options()
   op.datakindr <- list(
