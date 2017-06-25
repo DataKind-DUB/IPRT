@@ -384,6 +384,5 @@ combined_age_education_summary <-
 options(tibble.print_max = Inf)
 options(tibble.width = Inf)
 
-combined_age_education_summary
 
 
