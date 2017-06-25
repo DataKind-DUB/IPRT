@@ -11,8 +11,8 @@ get_num_search_results <- function(search_term){
 
   res <-
   (res %>%
-      html_node(".fl") %>%
-      html_text %>%
+      rvest::html_node(".fl") %>%
+      rvest::html_text %>%
       stringr::str_match("made (.*?) results"))[2] %>%
     as.numeric()
 
