@@ -1,10 +1,7 @@
 
-validate_search_term <- function(search_term,
-                                 num_results,
-                                 max_num_results){
+validate_search_term <- function(search_term, num_results, max_num_results){
 # function to ensure the search results are useful to the user
-
-  if(num_results > max_num_results){
+  if(num_results > max_num_results) {
     stop(paste(
         "Too many search results.
          Number of results:", num_results, "\n",
@@ -13,8 +10,7 @@ validate_search_term <- function(search_term,
          If you wish to proceed, call search_statbank_datasets() with a larger max_num_results."))
   }
 
-  if(num_results == 0){
+  if(num_results == 0) {
     stop("Your search query did not return any results.")
   }
-
 }
