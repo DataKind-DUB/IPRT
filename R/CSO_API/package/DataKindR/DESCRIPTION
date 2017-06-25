@@ -2,11 +2,15 @@ Package: datakindr
 Type: Package
 Title: Tools And Utilities For The DataKind Team
 Version: 0.1.0
+Authors@R: person("Cormac", "Nolan", role = c("aut", "cre"),
+                   email= "cormacnolan85@gmail.com")
 Author: Cormac Nolan
 Maintainer: Cormac Nolan <cormacnolan85@gmail.com>
+Depends: R (>= 3.1.0)
 Description: Contains tools, utilities, palettes, settings etc. for 
     use by the DataKind Dublin team.
-License: GPL-3
+License: GPL (>= 2)
+URL: http://www.datakind.org/
 Encoding: UTF-8
 LazyData: true
 Imports: rjstat,
