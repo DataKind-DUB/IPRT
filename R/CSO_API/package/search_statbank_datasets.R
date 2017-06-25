@@ -23,7 +23,7 @@ search_statbank_datasets <- function(search_term, max_num_results = 500){
   for(offset in search_offsets){
   
     current_index <- (offset/15 + 1)
-    print(current_index)
+    print(paste("Requesting", current_index, "out of", length(search_offsets)))
     req <- create_cso_search_url(search_term, offset)
     res <- get_httr_html_content(req)
     combined_dataset_names[current_index] <-
