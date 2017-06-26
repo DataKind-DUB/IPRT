@@ -7,7 +7,11 @@
 # 
 # Currently I have also included a small comparison of the weighted and unweighed bigrams (in a not very good fashion). 
 
-# In[11]:
+'''
+To run, make sure the path is correct (fn = 'survey_results_clean.csv')
+The easiest way to execute this is probably in a jupyter notebook - some of the plots are not saved to a file
+If you get any errors, make sure the column names are the same as in the Midlands survey
+'''
 
 # import all of the necessary modules
 
