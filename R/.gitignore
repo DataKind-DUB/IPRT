@@ -1,0 +1,7 @@
+*.ini
+*.csv
+*.html
+*.png
+*.Rdata
+*.Rhistory
+*.Rmd
