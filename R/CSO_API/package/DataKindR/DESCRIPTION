@@ -3,7 +3,8 @@ Type: Package
 Title: Tools And Utilities for DataKind
 Version: 0.1.0
 Author: Cormac Nolan
-Authors@R: person("Cormac", "Nolan", email = "cormacnolan85@gmail.com")
+Authors@R: person("Cormac", "Nolan", email = "cormacnolan85@gmail.com",  
+    role = c("aut", "cre"))
 Maintainer: Cormac Nolan <cormacnolan85@gmail.com>
 Description: Provides tools, utilities, data and more for use by the DataKind
     Dublin team.
@@ -14,5 +15,7 @@ Imports: tidyr,
     rvest,
     httr,
     magrittr,
-    stringr
+    stringr,
+    xml2,
+    rjstat
 RoxygenNote: 6.0.1

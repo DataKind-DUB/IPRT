@@ -1,6 +1,13 @@
+#' Ensures the search results are useful to the user. Throws errors if
+#' validation fails.
+#'
+#' @param search_term A search term used to get CSO datasets.
+#' @param num_results The number of results for the current search term.
+#' @param max_num_results The maximum number of results to return.
+#' @keywords internal
 
 validate_search_term <- function(search_term, num_results, max_num_results){
-# function to ensure the search results are useful to the user
+
   if(num_results > max_num_results) {
     stop(paste(
         "Too many search results.

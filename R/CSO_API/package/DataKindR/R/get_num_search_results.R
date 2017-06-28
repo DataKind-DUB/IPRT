@@ -1,3 +1,11 @@
+#' Gets the number of search results that a given search term on StatBank
+#' will return. Uses web scraping. For internal use by datakindr.
+#'
+#' @param search_term A search term used to get CSO datasets.
+#' @return The number of search results
+#' @keywords internal
+#' @importFrom magrittr %>% %<>%
+#'
 
 get_num_search_results <- function(search_term){
   # Returns total number of search results given a search term.

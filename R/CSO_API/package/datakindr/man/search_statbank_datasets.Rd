@@ -13,7 +13,7 @@ search_statbank_datasets(search_term, max_num_results = 500)
 \item{max_num_results}{The maximum number of results to return.}
 }
 \value{
-A data frame with two columns, \vode{dataset_code} &
+A data frame with two columns, \code{dataset_code} &
 \code{dataset_desc}. Codes can be used to retrieve Statbank datasets.
 }
 \description{
