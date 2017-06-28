@@ -32,7 +32,7 @@ search_statbank_datasets <- function(search_term, max_num_results = 500){
     combined_dataset_names[current_index] <-
       list(res %>%
              rvest::html_nodes(".SearchHeadCell") %>%
-             rvest::html_text)
+             rvest::html_text())
   }
   search_results_to_dataframe(combined_dataset_names)
 }
