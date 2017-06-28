@@ -1,7 +1,8 @@
-
 # coding: utf-8
 
-# In[6]:
+'''
+This code extrapolates from the Midlands survey to find the number of children with a parent in any prison
+'''
 
 get_ipython().magic('matplotlib inline')
 import pandas as pd
@@ -10,7 +11,7 @@ import scipy
 import numpy as np
 from matplotlib import pyplot as plt
 
-df = pd.read_excel('survey_results_clean.csv.xlsx')
+df = pd.read_excel('survey_results_clean.csv.xlsx') # put the path to the survey here
 df['children_aged_12_18']=df['boys_under_18'].values + df['girls_under_18'].values - df['children_aged_5_12'].values - df['children_aged_under_5'].values
 
 
@@ -30,6 +31,8 @@ num_adult_children, conf_ints_adult_children = scipy.sum(df['adult_children']), 
 
 # In[21]:
 
+# Now print the results what is effectively the mean and the 2sigma (95% confidence interval)
+    
 print('Number of children with parent in Midlands Prison: '+str(conf_ints_children[0])+' to '+str(conf_ints_children[1]))
 print('Number of children under 5 with parent in Midlands Prison: '+str(conf_ints_children_u5[0])+' to '+str(conf_ints_children_u5[1]))
 print('Number of children between 5 and 12 with parent in Midlands Prison: '+str(conf_ints_children_5to12[0])+' to '+str(conf_ints_children_5to12[1]))
@@ -38,6 +41,8 @@ print('Number of adult children with parent in Midlands Prison: '+str(conf_ints_
 
 
 # In[22]:
+    
+# extrapolate to full survey
 
 total_num_prisoners = 3674 # http://www.iprt.ie/prison-facts-2
 survey_population = 383
@@ -48,8 +53,6 @@ irish_conf_ints_children_12to18 = scipy.multiply(conf_ints_children_12to18, tota
 irish_conf_ints_adult_children = scipy.multiply(conf_ints_adult_children, total_num_prisoners/survey_population)
 
 
-# In[24]:
-
 print('Assuming a total Irish prison population of '+str(total_num_prisoners) + ' and a survey sample of '+str(survey_population)+':')
 print('Number of children with parent in an Irish Prison: '+str(int(np.ceil(irish_conf_ints_children[0])))+' to '+str(int(np.ceil(irish_conf_ints_children[1]))))
 print('Number of children under 5 with parent in an Irish Prison: '+str(int(np.ceil(irish_conf_ints_children_u5[0])))+' to '+str(int(np.ceil(irish_conf_ints_children_u5[1]))))
@@ -58,7 +61,7 @@ print('Number of children between 12 and 18 with parent in an Irish Prison: '+st
 print('Number of adult children with parent in an Irish Prison: '+str(int(np.ceil(irish_conf_ints_adult_children[0])))+' to '+str(int(np.ceil(irish_conf_ints_adult_children[1]))))
 
 
-# In[25]:
+# Plot the results as a bar chart
 
 bins = ['0-5','5-12','12-18','Over 18']
 ind = np.arange(len(bins))
