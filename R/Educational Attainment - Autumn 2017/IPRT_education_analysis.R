@@ -958,7 +958,6 @@ write.csv(x = as.matrix(proptest1ii), file = "prop.test1ii.csv", row.names = F, 
 # due to a lack of observations in the data
 # For example
 head(PRIS_COM_EDU[PRIS_COM_EDU$Total < 20,])
-# there are only 5 prisoners who are under 26 and have third level education
 # this lack of data makes it differcult ti derive meangingful inferences
 
 ########################################################################################################################
@@ -1345,8 +1344,6 @@ length(PRIS_LIMWHT_EDU$Total)
 length(PRIS_WHTMID_EDU$Total)
 length(PRIS_LIMMID_EDU$Total)
 # The prison datasets are not proportional do not have corresponding totals
-# (1) Limerick prison does not have anyone who is 51+ and has upper secondary education
-# (2) Wheatfield prison does not have anyone who is less than 26 and has third level education
 # To solve this issue I shall remove the corresponding proportion for each of the above issue
 PRIS_LIMMID_EDUpt <- PRIS_LIMMID_EDU[-27,]
 PRIS_LIMWHT_EDUpt <- PRIS_LIMWHT_EDU[-c(12,27),]
@@ -1437,19 +1434,7 @@ write.csv(x = as.matrix(proptest2ii), file = "prop.test2ii.csv", row.names = F, 
 # NOTE: the errors with the approxmation of the test statistic
 # comes from the lack of the data
 PRIS_WHTMID_EDUpt[PRIS_WHTMID_EDUpt$Total < 10,]
-# There are 9 observations in the ISCED 2 category in the 50+ age bracket in MID
-# There are 3 observations in the ISCED 0-1 category in the 50+ age bracket in WHT
-# There are 2 observations in the ISCED 2 category in the 50+ age bracket in WHT
-# There are 4 observations in the ISCED 3 category in the <26 age bracket in WHT
-# There are 5 observations in the ISCED 3 category in the 26-35 age bracket in WHT
-# There are 2 observations in the ISCED 3 category in the 50+ age bracket in WHT
 PRIS_LIMWHT_EDUpt[PRIS_LIMWHT_EDUpt$Total < 10,]
-# There are 6 observations in the ISCED 0-1 category in the 36-50 age bracket in LIM
-# There are 1 observations in the ISCED 0-1 category in the 51+ age bracket in LIM
-# There are 9 observations in the ISCED 2 category in the 36-50 age bracket in LIM
-# There are 2 observations in the ISCED 2 category in the 51+ age bracket in LIM
-# There are 2 observations in the ISCED 3 category in the <26 age bracket in LIM
-# There are 1 observations in the ISCED 3 category in the 26-35 age bracket in LIM
 PRIS_LIMMID_EDUpt[PRIS_LIMMID_EDUpt$Total < 10,]
 
 ########################################################################################################################
@@ -1981,9 +1966,6 @@ length(CSO_MIDGEN_EDU$Total)
 length(PRIS_WHTGEN_EDU$Total)
 length(CSO_WHTGEN_EDU$Total)
 # The prison datasets are not proportional do not have corresponding totals
-# (1) Limerick Prison does not have any prisoners over 51 with upper secondary education
-# (2) Midlands Prison does not have any prisoners over 65 with lower secondary education
-# (3) Wheatfield does not have any prisoners aged 22-25 or 17-21 with third level education
 # To solve this issue I shall remove the corresponding proportion for each of the above issue
 COM_LIM_EDUpt <- COM_LIM_EDU[-27,]
 COM_WHTGEN_EDUpt <- COM_WHTGEN_EDU[-28,]
@@ -2063,17 +2045,5 @@ write.csv(x = as.matrix(proptest3ii), file = "prop.test3ii.csv", row.names = F, 
 # NOTE: the errors with the approxmation of the test statistic
 # comes from the lack of the data
 COM_LIM_EDUpt[COM_LIM_EDU$Total < 5,]
-# There are 6 observations in the ISCED 0-1 category in the 36-50 age bracket in LIM
-# There are 1 observations in the ISCED 0-1 category in the 51+ age bracket in LIM
-# There are 9 observations in the ISCED 2 category in the 36-50 age bracket in LIM
-# There are 2 observations in the ISCED 2 category in the 51+ age bracket in LIM
-# There are 2 observations in the ISCED 3 category in the 18-25 age bracket in LIM
-# There are 1 observations in the ISCED 3 category in the 26-35 age bracket in LIM
 COM_WHTGEN_EDU[COM_WHTGEN_EDU$Total < 5,]
-# There are 3 observations in the ISCED 0-1 category in the 36-50 age bracket in WHT
-# There are 2 observations in the ISCED 2 category in the 51+ age bracket in WHT
-# There are 4 observations in the ISCED 3 category in the 36-50 age bracket in WHT
-# There are 5 observations in the ISCED 3 category in the 51+ age bracket in WHT
-# There are 2 observations in the ISCED 3 category in the 18-25 age bracket in WHT
-# There are 3 observations in the ISCED 4-8 category in the 26-35 age bracket in WHT
 PRIS_MIDGEN_EDU[PRIS_MIDGEN_EDU$Total < 5,]
